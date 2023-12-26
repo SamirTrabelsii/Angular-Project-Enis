@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="end center" >
+
+<button routerLink="/MemberForm"> Create New </button>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="ID">
+    <th mat-header-cell *matHeaderCellDef> ID</th>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="CIN">
+    <th mat-header-cell *matHeaderCellDef> CIN</th>
+    <td mat-cell *matCellDef="let element">{{element.cin}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef> NAME</th>
+    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Type">
+    <th mat-header-cell *matHeaderCellDef> TYPE</th>
+    <td mat-cell *matCellDef="let element">{{element.type}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="CV">
+    <th mat-header-cell *matHeaderCellDef> CV</th>
+    <td mat-cell *matCellDef="let element"><a href="{{element.cv}}"><mat-icon>picture_as_pdf</mat-icon></a></td>
+  </ng-container>
+
+  <ng-container matColumnDef="CreatedDate">
+    <th mat-header-cell *matHeaderCellDef> CreatedDate</th>
+    <td mat-cell *matCellDef="let element">{{element.createdDate}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button routerLink="/{{element.id}}/edit"><mat-icon>edit</mat-icon></button>
+      <button mat-raised-button (click)="handleButtonClick(element.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

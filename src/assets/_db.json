@@ -1,0 +1,47 @@
+{
+    "members":[
+        {"id":"123456",
+"cin":"123456",
+"name":"rym",
+"createdDate":"12/12/2022",
+"cv":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+"type":"student"},
+{"id":"654321",
+"cin":"654321",
+"name":"samir",
+"createdDate":"21/12/2022",
+"cv":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+"type":"student"},
+{"id":"789102",
+"cin":"789102",
+"name":"bahchouch",
+"createdDate":"30/12/2022",
+"cv":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+"type":"teacher"}
+    ],
+    "Events":[
+        {"id":"9990999",
+        "title":"PYFAC9",
+        "dateDebut":"11/11/2023",
+        "dateFin":"11/13/2023",
+        "lieu":"Marassim"},
+        {"id":"9991999",
+        "title":"PYFAC8",
+        "dateDebut":"11/12/2022",
+        "dateFin":"11/20/2021",
+        "lieu":"Marassim"},        
+        {"id":"9991999",
+        "title":"PYFAC7",
+        "dateDebut":"11/13/2021",
+        "dateFin":"11/21/2021",
+        "lieu":"Alflilawlila"}
+    ],
+    "Articles":[
+        {"id":"178",
+        "type":"Recherche",
+        "title":"How to be Samir",
+        "dateApparition":"14/11/2023",
+        "sourcePdf":"string",
+        "auteur":"samir"}
+    ]
+}

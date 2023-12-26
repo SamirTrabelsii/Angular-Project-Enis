@@ -1,0 +1,59 @@
+<style>
+    .dashboard-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      padding: 20px;
+    }
+  
+    .dashboard-card {
+      flex: 1 1 300px;
+      margin: 10px;
+    }
+  
+    .chart-wrapper {
+      margin: 20px;
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+  
+  <div class="dashboard-container">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>Members</mat-card-title>
+        <mat-card-subtitle>{{nb_Members}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>Events</mat-card-title>
+        <mat-card-subtitle>{{nb_Events}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>Tools</mat-card-title>
+        <mat-card-subtitle>{{nb_Tools}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>Articles</mat-card-title>
+        <mat-card-subtitle>{{nb_Articles}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  
+    <div class="chart-wrapper">
+      <canvas baseChart [type]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"></canvas>
+    </div>
+  
+    <div class="chart-wrapper">
+      <canvas baseChart [type]="'pie'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"></canvas>
+    </div>
+  </div>
+  
